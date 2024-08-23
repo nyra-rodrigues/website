@@ -377,12 +377,10 @@ text-animation{
 .services{
     background: var(--bg-color);
     color: black;
-    
-    
 }
 
 .services h2{
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     color: var(--main-color);
 }
 
@@ -395,7 +393,7 @@ text-animation{
 
 .service-box{
     background-color: white;
-    height: 300px;
+    height: 250px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
@@ -418,13 +416,13 @@ text-animation{
     justify-content: left;
     align-items: baseline;
     padding: 5rem 5rem;
-    
+
 }
 
 .service-info h4{
     font-size: 3rem;
     font-weight: 800;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .service-info p{
@@ -435,7 +433,7 @@ text-animation{
     margin: auto;
 }
 .testimonials{
-    margin-top: -10rem;
+    margin-top: -15rem;
     background: var(--second-bg-color);
 }
 
@@ -668,20 +666,52 @@ text-animation{
         margin: 5rem 4rem;
     }
     .home-content h3{
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
     .home-content h1{
-        font-size: 8rem;
+        font-size: 5rem;
         margin-top: 3rem;
     }
     .home-content p{
         max-width: 600px;
         margin: 0 auto;
+        text-align: center;
     }
     .home-img img{
+        margin-top: -15rem;
         width: 56vw;
+        margin-bottom: -15rem;
     }
+
+    .education h2{
+        margin-bottom: 3rem;
+        font-size: 5rem;
+    }
+
+    .services h2{
+        margin-top: -15rem;
+        margin-bottom: 3rem;
+        font-size: 5rem;
+    }
+
+    .service-info h4{
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.5;
+    }
+
+    .service-info p{
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1.5;
+    }
+
     .services-container{
         grid-template-columns: repeat(1,1fr);
+    }
+    
+    .testimonials .heading{
+        font-size: 4rem;
+        margin-top: -1rem;
     }
 }
