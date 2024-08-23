@@ -376,7 +376,7 @@ text-animation{
 
 .services{
     background: var(--bg-color);
-    color: black;
+    color: white;
 }
 
 .services h2{
@@ -392,7 +392,7 @@ text-animation{
 }
 
 .service-box{
-    background-color: var(--main-color);
+    background-color: rgba(0,0, 0, 0.7);;
     height: 250px;
     border-radius: 3rem;
     border: 5px solid transparent;
@@ -402,9 +402,9 @@ text-animation{
 }
 
 .service-box:hover{
-    background: white;
+    background: var(--main-color);
     color: black;
-    border: 5px solid var(--second-bg-color);
+    border: 5px solid var(--main-color);
     transform: scale(1.03);
     box-shadow: 0 0 25px var(--main-color);
 }
