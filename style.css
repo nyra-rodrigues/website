@@ -380,7 +380,7 @@ text-animation{
 }
 
 .services h2{
-    margin-bottom: 2rem;
+    margin-bottom: rem;
     color: var(--main-color);
 }
 
@@ -392,18 +392,19 @@ text-animation{
 }
 
 .service-box{
-    background-color: white;
+    background-color: var(--main-color);
     height: 250px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    box-shadow: 0 0 25px var(--main-color);
 }
 
 .service-box:hover{
-    background: #d2a4ee;
+    background: white;
     color: black;
-    border: 5px solid #d2a4ee;
+    border: 5px solid var(--second-bg-color);
     transform: scale(1.03);
     box-shadow: 0 0 25px var(--main-color);
 }
