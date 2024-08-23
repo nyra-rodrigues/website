@@ -381,7 +381,7 @@ text-animation{
 
 .services h2{
     margin-bottom: rem;
-    color: var(--main-color);
+    color: white;
 }
 
 .services-container{
