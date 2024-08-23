@@ -381,7 +381,7 @@ text-animation{
 
 .services h2{
     margin-bottom: 5rem;
-    color: white;
+    color: var(--main-color);
 }
 
 .services-container{
@@ -395,7 +395,7 @@ text-animation{
     background-color: rgba(0,0, 0, 0.7);;
     height: 250px;
     border-radius: 3rem;
-    border: 5px solid transparent;
+    border: 5px solid  var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
     box-shadow: 0 0 25px var(--main-color);
@@ -428,7 +428,7 @@ text-animation{
 
 .service-info p{
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     max-height: 100px;
     line-height: 1.7;
     margin: auto;
