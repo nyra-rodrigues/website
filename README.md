@@ -4,8 +4,6 @@ Welcome to my website! A place where I share my passion for Computer Science, Fi
 
 Feel free to explore my work, learn about my journey, and get in touch if you’d like to collaborate or chat about any of the projects featured here!
 
-Let me know if you'd like to tweak anything!
-
 
 
 
