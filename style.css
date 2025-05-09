@@ -490,47 +490,89 @@ text-animation{
     color: var(--main-color);
 }
 
-/*
-.contact{
+.contact {
     background-color: var(--bg-color);
+    padding: 10rem 10% 12rem;
 }
 
-.contact h2{
+.contact h2 {
     margin-bottom: 3rem;
-    color: white;  
+    color: var(--main-color);
+    text-align: center;
+    font-size: 8rem;
 }
 
-.contact form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin: 5rem auto;
+.contact form {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.contact form .input-box{
+.contact form .input-group {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.contact form .input-box input,
-.contact form textarea{
+.contact form .input-box {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact form .input-box input {
     width: 100%;
-    padding: 2.5rem;
+    padding: 2rem;
     font-size: 1.8rem;
     color: var(--text-color);
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     border-radius: 2rem;
     border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
-    resize: none;
+    transition: 0.3s ease;
 }
 
-.contact form .btn{
+.contact form .input-box input:focus {
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.contact form .input-group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact form textarea {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    resize: none;
+    transition: 0.3s ease;
+}
+
+.contact form textarea:focus {
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.contact form .btn {
+    align-self: center;
     margin-top: 2rem;
-} */
+    cursor: pointer;
+    background: var(--main-color);
+    color: black;
+    border: 2px solid var(--main-color);
+}
+
+.contact form .btn:hover {
+    background: transparent;
+    color: var(--main-color);
+}
 
 .footer{
     margin-top: 60px;
@@ -629,8 +671,17 @@ text-animation{
     .testimonials .wrapper{
         grid-template-columns: repeat(1,1fr);
     }
-    .contact form{
+    .contact {
+        padding: 8rem 3% 2rem;
+    }
+    .contact h2 {
+        font-size: 6rem;
+    }
+    .contact form .input-group {
         flex-direction: column;
+    }
+    .contact form .input-box {
+        flex: 1 1 100%;
     }
     .footer{
         padding: 2rem 3%;
@@ -714,5 +765,223 @@ text-animation{
     .testimonials .heading{
         font-size: 4rem;
         margin-top: -1rem;
+    }
+    .contact h2 {
+        font-size: 5rem;
+    }
+}
+
+.projects {
+    background: var(--bg-color);
+    color: white;
+    padding: 10rem 10% 12rem;
+}
+
+.projects h2 {
+    margin-bottom: 5rem;
+    color: var(--main-color);
+    text-align: center;
+    font-size: 8rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-box {
+    background-color: rgba(0,0, 0, 0.7);
+    border-radius: 3rem;
+    border: 3px solid var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 25px var(--main-color);
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px var(--main-color);
+    border-color: var(--main-color);
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease-in-out;
+}
+
+.project-box:hover .project-cover {
+    transform: scale(1.1);
+}
+
+.github-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.github-link:hover {
+    transform: scale(1.1);
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: 700;
+    margin: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-header h3 {
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: 700;
+    margin: 0;
+}
+
+.project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
+
+.project-info p {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.project-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.project-info ul li {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.project-info ul li::before {
+    content: "•";
+    color: var(--main-color);
+    position: absolute;
+    left: 0;
+    font-size: 2rem;
+    top: -0.2rem;
+}
+
+.project-info .btn {
+    align-self: flex-start;
+    margin-top: 2rem;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.project-info .btn:hover {
+    background-color: var(--main-color);
+    color: black;
+    transform: scale(1.05);
+}
+
+@media(max-width: 1285px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding: 0 4rem;
+    }
+}
+
+@media(max-width: 991px) {
+    .projects {
+        padding: 8rem 3% 2rem;
+    }
+    
+    .projects h2 {
+        font-size: 6rem;
+    }
+}
+
+@media(max-width: 895px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+    
+    .project-box {
+        margin: 0;
+    }
+    
+    .projects h2 {
+        font-size: 5rem;
     }
 }

@@ -23,3 +23,55 @@ menuIcon.onclick= () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+// Contact Form Handling
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formStatus = document.getElementById('form-status');
+    const submitButton = this.querySelector('input[type="submit"]');
+    
+    // Disable submit button and show loading state
+    submitButton.disabled = true;
+    submitButton.value = 'Sending...';
+    
+    // Get form data
+    const formData = new FormData(this);
+    const formDataObj = {};
+    formData.forEach((value, key) => formDataObj[key] = value);
+    
+    // Send data to Google Sheets
+    fetch(this.action, {
+        method: 'POST',
+        body: JSON.stringify(formDataObj),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            formStatus.style.display = 'block';
+            formStatus.style.color = '#bb83de';
+            formStatus.textContent = 'Message sent successfully!';
+            this.reset();
+        } else {
+            throw new Error('Network response was not ok');
+        }
+    })
+    .catch(error => {
+        formStatus.style.display = 'block';
+        formStatus.style.color = '#ff4444';
+        formStatus.textContent = 'Error sending message. Please try again.';
+        console.error('Error:', error);
+    })
+    .finally(() => {
+        // Re-enable submit button
+        submitButton.disabled = false;
+        submitButton.value = 'Send Message';
+        
+        // Hide status message after 5 seconds
+        setTimeout(() => {
+            formStatus.style.display = 'none';
+        }, 5000);
+    });
+});
