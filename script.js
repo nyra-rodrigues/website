@@ -75,3 +75,28 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         }, 5000);
     });
 });
+
+// Project Filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectBoxes = document.querySelectorAll('.project-box');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            projectBoxes.forEach(project => {
+                if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                    project.classList.remove('hide');
+                } else {
+                    project.classList.add('hide');
+                }
+            });
+        });
+    });
+});

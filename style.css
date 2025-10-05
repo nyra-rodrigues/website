@@ -361,6 +361,14 @@ text-animation{
     line-height: 22px;
 }
 
+.timeline-content .company-info{
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    text-shadow: 0 0 10px var(--main-color);
+}
+
 ::-webkit-scrollbar{
     width: 15px;  
 }
@@ -784,6 +792,33 @@ text-animation{
     font-size: 8rem;
 }
 
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
 .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -791,6 +826,14 @@ text-animation{
     padding: 0 2rem;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+.project-box {
+    transition: all 0.3s ease;
+}
+
+.project-box.hide {
+    display: none;
 }
 
 .project-box {
