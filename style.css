@@ -369,6 +369,60 @@ text-animation{
     text-shadow: 0 0 10px var(--main-color);
 }
 
+.timeline-content p.major-text{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin: 0.6rem 0;
+    line-height: 1.4;
+}
+
+.timeline-content p.minor-text{
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.3rem 0;
+    line-height: 1.5;
+}
+
+.coursework-box{
+    margin-top: 1.2rem;
+    padding: 1.1rem 1.2rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.coursework-label{
+    margin: 0 0 0.8rem;
+    color: var(--main-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.coursework-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.coursework-tags span{
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: rgba(187, 131, 222, 0.12);
+    border: 1px solid var(--main-color);
+    color: var(--text-color);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 500;
+    white-space: normal;
+    box-shadow: 0 0 12px rgba(187, 131, 222, 0.15);
+}
+
 ::-webkit-scrollbar{
     width: 15px;  
 }
@@ -400,10 +454,11 @@ text-animation{
 }
 
 .service-box{
-    background-color: rgba(0,0, 0, 0.7);;
-    height: 250px;
+    background-color: rgba(0,0, 0, 0.7);
+    min-height: 260px;
+    height: auto;
     border-radius: 3rem;
-    border: 5px solid  var(--main-color);
+    border: 5px solid var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
     box-shadow: 0 0 25px var(--main-color);
@@ -421,25 +476,24 @@ text-animation{
     display: flex;
     flex-direction: column;
     text-align: left;
-    max-height: 200px;
-    justify-content: left;
-    align-items: baseline;
-    padding: 5rem 5rem;
-
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2.5rem 2.8rem;
+    min-height: 100%;
 }
 
 .service-info h4{
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 800;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .service-info p{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    max-height: 100px;
     line-height: 1.7;
-    margin: auto;
+    margin: 0;
+    max-height: none;
 }
 .testimonials{
     margin-top: -15rem;
